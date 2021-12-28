@@ -1,0 +1,34 @@
+.tile {
+  width: 80px;
+  height: 80px;
+}
+
+.white-tile {
+  background-color: white;
+}
+
+.black-tile {
+  background-color: black;
+}
+
+@media only screen and (max-width: 800px) {
+  .tile {
+    width: 60px;
+    height: 60px;
+  }
+
+  .white-tile {
+    background-color: antiquewhite;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tile {
+    width: 45px;
+    height: 45px;
+  }
+
+  .black-tile {
+    background-color: chocolate;
+  }
+}

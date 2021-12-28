@@ -1,0 +1,37 @@
+.chessboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;
+  height: 640px;
+  background-color: black;
+}
+
+@media only screen and (max-width: 800px) {
+  .chessboard {
+    width: 480px;
+    height: 480px;
+  }
+
+  .five {
+    display: block;
+  }
+
+  .eight {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .chessboard {
+    width: 360px;
+    height: 360px;
+  }
+
+  .five {
+    display: none;
+  }
+
+  .eight {
+    display: block;
+  }
+}
