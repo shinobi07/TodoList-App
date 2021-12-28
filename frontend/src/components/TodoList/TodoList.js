@@ -14,7 +14,7 @@ function TodoList(props) {
   const [toBeFetched, setToBeFetched] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/items').then((res) => {
+    axios.get('https://taskreminder-api.herokuapp.com/items').then((res) => {
       setTodos(
         res.data.map((item) => {
           return {
@@ -33,7 +33,7 @@ function TodoList(props) {
     }
 
     axios
-      .post('http://localhost:5000/items', todo)
+      .post('https://taskreminder-api.herokuapp.com/items', todo)
       .then(() => setToBeFetched(!toBeFetched));
   };
 
@@ -43,13 +43,13 @@ function TodoList(props) {
     }
 
     axios
-      .put(`http://localhost:5000/items/${todoId}`, newValue)
+      .put(`https://taskreminder-api.herokuapp.com/items/${todoId}`, newValue)
       .then(() => setToBeFetched(!toBeFetched));
   };
 
   const removeTodo = (id) => {
     axios
-      .delete(`http://localhost:5000/items/${id}`)
+      .delete(`https://taskreminder-api.herokuapp.com/items/${id}`)
       .then(() => setToBeFetched(!toBeFetched));
   };
 
