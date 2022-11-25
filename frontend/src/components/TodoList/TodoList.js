@@ -49,7 +49,7 @@ function TodoList(props) {
 
   const removeTodo = (id) => {
     axios
-      .delete(`https://taskreminder-api.herokuapp.com/items/${id}`)
+      .delete(`https://taskreminder-api.fly.dev/items/${id}`)
       .then(() => setToBeFetched(!toBeFetched));
   };
 
