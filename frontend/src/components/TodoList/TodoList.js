@@ -14,7 +14,7 @@ function TodoList(props) {
   const [toBeFetched, setToBeFetched] = useState(true);
 
   useEffect(() => {
-    axios.get('https://taskreminder-api.herokuapp.com/items').then((res) => {
+    axios.get('https://taskreminder-api.fly.dev/items/').then((res) => {
       setTodos(
         res.data.map((item) => {
           return {
@@ -33,7 +33,7 @@ function TodoList(props) {
     }
 
     axios
-      .post('https://taskreminder-api.herokuapp.com/items', todo)
+      .post('https://taskreminder-api.fly.dev/items/', todo)
       .then(() => setToBeFetched(!toBeFetched));
   };
 
@@ -43,7 +43,7 @@ function TodoList(props) {
     }
 
     axios
-      .put(`https://taskreminder-api.herokuapp.com/items/${todoId}`, newValue)
+      .put(`https://taskreminder-api.fly.dev/items/${todoId}`, newValue)
       .then(() => setToBeFetched(!toBeFetched));
   };
 
